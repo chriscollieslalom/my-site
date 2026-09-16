@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chris | Designer</title>
+    <title>Collie&Co | Digital Experience Design</title>
     <meta
       name="description"
-      content="Chris is a multidisciplinary designer crafting thoughtful brand experiences, digital products, and visual storytelling."
+      content="Collie&Co designs enterprise-grade digital experiences with clarity, craft, and strategic product thinking."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,19 +16,19 @@
     />
     <style>
       :root {
-        --bg: #f3efe8;
-        --bg-alt: #e5dfd3;
-        --panel: rgba(255, 255, 255, 0.62);
-        --panel-strong: #f9f7f4;
+        --bg: #f5f1ea;
+        --bg-alt: #e7dfd3;
+        --panel: rgba(255, 255, 255, 0.7);
+        --panel-strong: #faf7f3;
         --text: #171412;
-        --muted: #5d5650;
+        --muted: #56504c;
         --line: rgba(23, 20, 18, 0.08);
         --shadow: 0 24px 60px rgba(28, 22, 16, 0.12);
-        --accent: #c77743;
-        --accent-soft: #f7d7c2;
-        --sage: #cbd7cb;
-        --rose: #f0c7c7;
-        --lavender: #d9d4ee;
+        --accent: #b9683a;
+        --accent-soft: #f1d9c4;
+        --sage: #c7d4c8;
+        --rose: #eecfcf;
+        --lavender: #d9d3ee;
       }
 
       * {
@@ -42,11 +42,24 @@
       body {
         margin: 0;
         font-family: "Inter", sans-serif;
+        text-align: left;
         background:
           radial-gradient(circle at top left, rgba(199, 119, 67, 0.14), transparent 28%),
           radial-gradient(circle at bottom right, rgba(130, 146, 190, 0.16), transparent 35%),
           var(--bg);
         color: var(--text);
+      }
+
+      .hero-copy,
+      .section-heading,
+      .about-copy,
+      .project-meta,
+      .service-card,
+      .footer-card,
+      .footer-bottom,
+      .weather-card,
+      .hero-metrics li {
+        text-align: left;
       }
 
       a {
@@ -79,43 +92,56 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 24px;
-        padding: 18px 22px;
-        background: rgba(255, 255, 255, 0.42);
-        border: 1px solid rgba(255, 255, 255, 0.44);
-        border-radius: 18px;
-        box-shadow: 0 20px 32px rgba(32, 26, 20, 0.06);
+        gap: 18px;
+        padding: 10px 14px 10px 20px;
+        background: rgba(255, 255, 255, 0.54);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 999px;
+        box-shadow: 0 18px 32px rgba(26, 20, 16, 0.06);
       }
 
       .brand {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         font-weight: 700;
         letter-spacing: 0.02em;
       }
 
       .brand-mark {
-        display: grid;
-        place-items: center;
-        width: 34px;
-        height: 34px;
-        border-radius: 10px;
-        background: linear-gradient(135deg, #171412, #6d5a49);
-        color: #fff;
-        font-size: 0.9rem;
+        display: none;
       }
 
       .brand-name {
-        font-size: 1.02rem;
+        font-size: 2.15rem;
+        letter-spacing: -0.08em;
+        line-height: 1;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
       }
 
       .nav {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 8px;
         color: var(--muted);
-        font-size: 0.96rem;
+        font-size: 0.9rem;
+        background: rgba(255, 255, 255, 0.24);
+        border: 1px solid rgba(23, 20, 18, 0.04);
+        border-radius: 999px;
+        padding: 6px;
+      }
+
+      .nav a {
+        padding: 10px 14px;
+        border-radius: 999px;
+        transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      }
+
+      .nav a:hover {
+        background: rgba(23, 20, 18, 0.04);
+        color: var(--text);
+        transform: translateY(-1px);
       }
 
       .nav a {
@@ -147,8 +173,8 @@
       }
 
       .button-small {
-        padding: 0.7rem 1.1rem;
-        font-size: 0.9rem;
+        padding: 0.78rem 1.1rem;
+        font-size: 0.88rem;
       }
 
       .button-secondary {
@@ -158,6 +184,15 @@
         box-shadow: none;
       }
 
+      .site-url {
+        margin: 14px 0 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: lowercase;
+      }
+
       .weather-card {
         min-width: 220px;
         padding: 16px 18px;
@@ -165,6 +200,12 @@
         background: rgba(255, 255, 255, 0.48);
         border: 1px solid rgba(255, 255, 255, 0.68);
         box-shadow: 0 16px 30px rgba(21, 18, 14, 0.07);
+      }
+
+      .footer-weather {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 18px;
       }
 
       .weather-header {
@@ -636,6 +677,12 @@
         font-size: 0.95rem;
       }
 
+      .footer-meta {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
       .socials {
         display: inline-flex;
         align-items: center;
@@ -722,9 +769,9 @@
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <div class="brand" aria-label="Chris home">
+        <div class="brand" aria-label="Collie and Co home">
           <span class="brand-mark">C</span>
-          <span class="brand-name">Chris</span>
+          <span class="brand-name">Collie&Co</span>
         </div>
 
         <nav class="nav" aria-label="Main navigation">
@@ -734,51 +781,38 @@
           <a href="#contact">Contact</a>
         </nav>
 
-        <div class="weather-card" id="weather-card" aria-live="polite">
-          <div class="weather-header">
-            <span class="weather-label">Weather</span>
-            <span class="weather-location" id="weather-location">Locating…</span>
-          </div>
-          <div class="weather-body">
-            <div class="weather-emoji" id="weather-emoji">⏳</div>
-            <div class="weather-reading">
-              <div class="weather-temp" id="weather-temp">--°C</div>
-              <div class="weather-condition" id="weather-condition">Loading…</div>
-            </div>
-          </div>
-        </div>
+        <a class="button button-small" href="#contact">Get in Touch</a>
       </header>
 
       <main>
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">Designer • Strategist • Storyteller</p>
+            <p class="eyebrow">Experience strategy • design • delivery</p>
             <h1>
-              I design brands and digital experiences that feel
-              <span>clear, memorable, and human.</span>
+              Return on Experience
+              <span>for enterprise platforms and digital operations.</span>
             </h1>
             <p class="lede">
-              I help founders and teams turn ideas into refined identities,
-              elevated interfaces, and compelling visual systems.
+              I design and optimize enterprise-grade digital experiences that generate revenue,
+              reduce operational friction, unlock cost take-out, and protect existing platform investments.
             </p>
 
             <div class="hero-actions">
-              <a class="button" href="#work">View projects</a>
               <a class="button button-secondary" href="#about">Learn more</a>
             </div>
 
             <ul class="hero-metrics" aria-label="Key achievements">
               <li>
-                <strong>8+</strong>
-                <span>Years designing</span>
+                <strong>15</strong>
+                <span>Years in experience transformation</span>
               </li>
               <li>
-                <strong>40+</strong>
-                <span>Brands launched</span>
+                <strong>Enterprise</strong>
+                <span>Portal, commerce, CRM and community platforms</span>
               </li>
               <li>
-                <strong>12</strong>
-                <span>Countries worked with</span>
+                <strong>Vancouver</strong>
+                <span>Based, advising globally</span>
               </li>
             </ul>
           </div>
@@ -797,12 +831,12 @@
               </div>
             </div>
             <div class="floating-note note-top">
-              <span>Brand direction</span>
+              <span>ROE impact</span>
               <strong>+32% engagement</strong>
             </div>
             <div class="floating-note note-bottom">
-              <span>Selected client</span>
-              <strong>Northstar Studio</strong>
+              <span>Client portfolio</span>
+              <strong>Microsoft | Walmart | Coca-Cola</strong>
             </div>
           </div>
         </section>
@@ -816,24 +850,24 @@
           <div class="about-grid">
             <div class="about-copy">
               <p>
-                I’m Chris, a designer focused on shaping thoughtful digital and
-                brand experiences. My work sits at the intersection of strategy,
-                visual storytelling, and product thinking.
+                Chris brings 15 years in all aspects of experience transformation for enterprise
+                platforms across strategy, design, and delivery. He envisions, launches, and optimizes
+                experiences and applications across portals, commerce, communities, and CRMs.
               </p>
               <p>
-                From positioning and naming to landing pages and polished visual
-                systems, I help ambitious brands communicate clearly and look
-                confidently distinct in a crowded market.
+                Driven by a passion for relationships, Chris is known as an authentic and collaborative
+                advisor to all levels of an organization, helping teams turn digital experience into measurable
+                business impact and long-term platform value.
               </p>
             </div>
 
             <div class="about-badges" aria-label="Design disciplines">
-              <span>Brand Identity</span>
-              <span>Art Direction</span>
-              <span>Web Design</span>
-              <span>UX/UI</span>
-              <span>Creative Strategy</span>
-              <span>Visual Systems</span>
+              <span>Experience Strategy</span>
+              <span>Digital Transformation</span>
+              <span>Enterprise UX</span>
+              <span>Commerce Experience</span>
+              <span>Portals & Communities</span>
+              <span>CRM Experience</span>
             </div>
           </div>
         </section>
@@ -842,7 +876,7 @@
           <div class="section-heading row">
             <div>
               <p class="eyebrow">Selected work</p>
-              <h2>Recent projects with a strong point of view.</h2>
+              <h2>Trusted by enterprise leaders across the S&P 500.</h2>
             </div>
             <a class="text-link" href="#contact">Let’s collaborate</a>
           </div>
@@ -854,8 +888,8 @@
                 <div class="shape shape-b"></div>
               </div>
               <div class="project-meta">
-                <p>Brand identity</p>
-                <h3>Northstar</h3>
+                <p>Enterprise platform</p>
+                <h3>Microsoft</h3>
               </div>
             </article>
 
@@ -865,8 +899,8 @@
                 <div class="shape shape-d"></div>
               </div>
               <div class="project-meta">
-                <p>Web experience</p>
-                <h3>Form & Frame</h3>
+                <p>Commerce experience</p>
+                <h3>Walmart</h3>
               </div>
             </article>
 
@@ -876,8 +910,8 @@
                 <div class="shape shape-f"></div>
               </div>
               <div class="project-meta">
-                <p>Campaign art direction</p>
-                <h3>Aster & Co.</h3>
+                <p>Customer platform</p>
+                <h3>Coca-Cola</h3>
               </div>
             </article>
           </div>
@@ -886,34 +920,34 @@
         <section class="services section" id="services">
           <div class="section-heading">
             <p class="eyebrow">Services</p>
-            <h2>Creative support built around your next move.</h2>
+            <h2>Experience programs designed for enterprise growth.</h2>
           </div>
 
           <div class="services-grid">
             <article class="service-card">
               <span class="service-index">01</span>
-              <h3>Brand Identity</h3>
+              <h3>Experience Strategy</h3>
               <p>
-                Visual systems, messaging frameworks, and strategic direction for
-                brands ready to stand out.
+                Align customer and employee experiences with enterprise goals to unlock revenue,
+                improve adoption, and create measurable business outcomes.
               </p>
             </article>
 
             <article class="service-card">
               <span class="service-index">02</span>
-              <h3>Website Design</h3>
+              <h3>Platform Transformation</h3>
               <p>
-                Conversion-minded digital experiences that blend storytelling,
-                clarity, and premium aesthetics.
+                Reimagine portals, commerce, communities, and CRM experiences to reduce friction,
+                increase usability, and protect existing platform investments.
               </p>
             </article>
 
             <article class="service-card">
               <span class="service-index">03</span>
-              <h3>Creative Direction</h3>
+              <h3>ROE Advisory</h3>
               <p>
-                Art direction and campaign thinking that keeps every touchpoint
-                cohesive and compelling.
+                Identify cost take-out, cost avoidance, and revenue opportunities across the
+                digital experience lifecycle with a clear path to value realization.
               </p>
             </article>
           </div>
@@ -924,16 +958,35 @@
         <div class="footer-card">
           <div>
             <p class="eyebrow">Let’s work together</p>
-            <h2>Need a thoughtful designer for your next launch?</h2>
+            <h2>Need a more thoughtful digital experience for your product or platform?</h2>
+            <p class="site-url">Collie&Co.com</p>
           </div>
-          <a class="button" href="mailto:hello@chrisdesigner.com">hello@chrisdesigner.com</a>
+          <a class="button" href="mailto:hello@Collie&Co.com">hello@Collie&Co.com</a>
         </div>
         <div class="footer-bottom">
-          <span>© 2026 Chris</span>
-          <div class="socials" aria-label="Social links">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://dribbble.com" target="_blank" rel="noreferrer">Dribbble</a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+          <div class="footer-meta">
+            <span>© 2026 Collie&Co</span>
+            <div class="socials" aria-label="Social links">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://dribbble.com" target="_blank" rel="noreferrer">Dribbble</a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="footer-weather">
+            <div class="weather-card" id="weather-card" aria-live="polite">
+              <div class="weather-header">
+                <span class="weather-label">Weather</span>
+                <span class="weather-location" id="weather-location">Locating…</span>
+              </div>
+              <div class="weather-body">
+                <div class="weather-emoji" id="weather-emoji">⏳</div>
+                <div class="weather-reading">
+                  <div class="weather-temp" id="weather-temp">--°C</div>
+                  <div class="weather-condition" id="weather-condition">Loading…</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
